@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Technical Blogs & Articles - Tarun Kumar | AI/ML Engineer</title>
+    <meta name="description" content="Explore insightful technical blogs on AI, Machine Learning, and software development by Tarun Kumar. Expert tutorials, industry insights, and practical guides.">
+    <meta name="keywords" content="AI blogs, machine learning tutorials, chatbot development, Python programming, technical articles, AI insights">
+    <meta name="author" content="Tarun Kumar">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Technical Blogs & Articles - Tarun Kumar">
+    <meta property="og:description" content="Expert insights on AI, ML, and software development. Quality technical content for developers and AI enthusiasts.">
+    <meta property="og:type" content="blog">
+    <meta property="og:url" content="https://tarunkumar.dev/blogs.html">
+    <meta property="og:site_name" content="Tarun Kumar - AI/ML Engineer">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Technical Blogs & Articles - Tarun Kumar">
+    <meta name="twitter:description" content="Expert insights on AI, ML, and software development">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tarunkumar.dev/blogs.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.ico">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Tarun Kumar's Technical Blog",
+        "description": "Technical insights on AI, Machine Learning, and software development",
+        "url": "https://tarunkumar.dev/blogs.html",
+        "author": {
+            "@type": "Person",
+            "name": "Tarun Kumar",
+            "jobTitle": "AI/ML Engineer",
+            "url": "https://tarunkumar.dev"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Tarun Kumar"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header Navigation with sticky animation -->
+    <header class="header sticky-header" id="main-header">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="education.html" class="nav-link">Education</a></li>
+                    <li><a href="experience.html" class="nav-link">Experience</a></li>
+                    <li><a href="profiles.html" class="nav-link">Profiles</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blogs.html" class="nav-link active" aria-current="page">Blogs</a></li>
+                    <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="milestones.html" class="nav-link">Milestones</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </nav>
+        <div class="nav-overlay" id="nav-overlay"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">Blogs</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Hero Section with Typewriter Effect -->
+        <section class="blog-hero parallax-section">
+            <div class="hero-background">
+                <div class="neural-network" id="neural-network"></div>
+                <div class="floating-particles"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <h1 class="hero-title">
+                        <span class="typewriter" data-text="Technical Blogs & Insights">Technical Blogs & Insights</span>
+                    </h1>
+                    <p class="hero-subtitle fade-in-delay-1">
+                        Exploring cutting-edge AI, Machine Learning insights, and emerging technology
+                    </p>
+                    <div class="hero-stats fade-in-delay-2">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="25">0</span>
+                            <span class="stat-label">Articles</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="10000">0</span>
+                            <span class="stat-label">Readers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="12">0</span>
+                            <span class="stat-label">Categories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="blog-controls">
+            <div class="container">
+                <div class="controls-wrapper fade-in-up">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                            <input type="search" 
+                                   placeholder="Search articles..." 
+                                   aria-label="Search blog articles"
+                                   id="blog-search"
+                                   class="search-input">
+                        </div>
+                    </div>
+                    
+                    <div class="filter-container">
+                        <label for="category-filter" class="sr-only">Filter by category</label>
+                        <select id="category-filter" class="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="ai-ml">AI & Machine Learning</option>
+                            <option value="development">Development</option>
+                            <option value="community">Community</option>
+                            <option value="tutorial">Tutorial</option>
+                            <option value="career">Career</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section class="featured-article">
+            <div class="container">
+                <article class="featured-card scroll-reveal" itemscope itemtype="https://schema.org/BlogPosting">
+                    <div class="featured-content">
+                        <div class="article-meta">
+                            <span class="category-badge featured">Featured</span>
+                            <time class="publish-date" datetime="2024-12-15" itemprop="datePublished">December 15, 2024</time>
+                            <span class="read-time">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                8 min read
+                            </span>
+                        </div>
+                        
+                        <h2 class="featured-title" itemprop="headline">
+                            How I Built PDFGenie: AI-Powered PDF Assistant with Advanced NLP
+                        </h2>
+                        
+                        <div class="featured-excerpt" itemprop="description">
+                            <p>Deep dive into creating an intelligent PDF chatbot using OpenAI API, PyPDF2, and advanced text-to-speech capabilities. Learn about the complete architecture, overcome technical challenges, and discover practical solutions for building production-ready AI applications.</p>
+                        </div>
+                        
+                        <div class="article-tags">
+                            <span class="tag" itemprop="keywords">AI</span>
+                            <span class="tag" itemprop="keywords">OpenAI</span>
+                            <span class="tag" itemprop="keywords">Python</span>
+                            <span class="tag" itemprop="keywords">NLP</span>
+                            <span class="tag" itemprop="keywords">PDF Processing</span>
+                        </div>
+                        
+                        <a href="#" class="read-more-btn hover-lift" aria-label="Read full article about PDFGenie">
+                            <span>Read Full Article</span>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="featured-image">
+                        <div class="image-container hover-scale">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23131318'/%3E%3Ccircle cx='200' cy='125' r='40' fill='%239d00ff' opacity='0.3'/%3E%3Ctext x='200' y='135' text-anchor='middle' fill='%23e0e6ed' font-family='Arial' font-size='14'%3EPDFGenie%3C/text%3E%3C/svg%3E" 
+                                 alt="PDFGenie AI Assistant - Featured Article Image" 
+                                 loading="lazy"
+                                 itemprop="image">
+                            <div class="image-overlay">
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="blog-grid-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title scroll-reveal">Latest Articles</h2>
+                    <p class="section-subtitle scroll-reveal">Explore my latest thoughts on technology, AI, and development</p>
+                </header>
+                
+                <div class="blog-grid" id="blog-grid">
+                    <!-- Blog Card 1 -->
+                    <article class="blog-card scroll-reveal hover-lift" data-category="community" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23131318'/%3E%3Ccircle cx='150' cy='100' r='30' fill='%23ffaa00' opacity='0.4'/%3E%3Ctext x='150' y='105' text-anchor='middle' fill='%23e0e6ed' font-family='Arial' font-size='12'%3EHackathon%3C/text%3E%3C/svg%3E" 
+                                 alt="HackFinity 1.0 Event Management" 
+                                 loading="lazy"
+                                 itemprop="image">
+                            <div class="card-overlay">
+                                <span class="category-badge">Event Management</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <time datetime="2024-12-10" itemprop="datePublished">December 10, 2024</time>
+                                <span class="read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    6 min read
+                                </span>
+                            </div>
+                            
+                            <h3 class="card-title" itemprop="headline">
+                                <a href="#" class="title-link">HackFinity 1.0: Behind the Scenes of Organizing a 100+ Participant Hackathon</a>
+                            </h3>
+                            
+                            <p class="card-excerpt" itemprop="description">
+                                A comprehensive look at planning, executing, and learning from one of GL Bajaj's biggest hackathons. From initial brainstorming to successful execution.
+                            </p>
+                            
+                            <div class="card-tags">
+                                <span class="tag" itemprop="keywords">Event Management</span>
+                                <span class="tag" itemprop="keywords">Leadership</span>
+                                <span class="tag" itemprop="keywords">Hackathon</span>
+                            </div>
+                            
+                            <a href="#" class="read-more-link" aria-label="Read more about HackFinity 1.0">
+                                Read More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="blog-card scroll-reveal hover-lift" data-category="ai-ml" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23131318'/%3E%3Ccircle cx='150' cy='100' r='30' fill='%239d00ff' opacity='0.4'/%3E%3Ctext x='150' y='105' text-anchor='middle' fill='%23e0e6ed' font-family='Arial' font-size='12'%3EPrompt AI%3C/text%3E%3C/svg%3E" 
+                                 alt="Prompt Engineering Tutorial" 
+                                 loading="lazy"
+                                 itemprop="image">
+                            <div class="card-overlay">
+                                <span class="category-badge">AI/ML</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <time datetime="2024-11-28" itemprop="datePublished">November 28, 2024</time>
+                                <span class="read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    10 min read
+                                </span>
+                            </div>
+                            
+                            <h3 class="card-title" itemprop="headline">
+                                <a href="#" class="title-link">Prompt Engineering 101: Mastering AI Conversations</a>
+                            </h3>
+                            
+                            <p class="card-excerpt" itemprop="description">
+                                Essential techniques for crafting effective prompts, optimizing AI model responses, and building better human-AI interactions with practical examples.
+                            </p>
+                            
+                            <div class="card-tags">
+                                <span class="tag" itemprop="keywords">Prompt Engineering</span>
+                                <span class="tag" itemprop="keywords">AI</span>
+                                <span class="tag" itemprop="keywords">GPT</span>
+                            </div>
+                            
+                            <a href="#" class="read-more-link" aria-label="Read more about Prompt Engineering">
+                                Read More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="blog-card scroll-reveal hover-lift" data-category="ai-ml" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23131318'/%3E%3Ccircle cx='150' cy='100' r='30' fill='%2300d4ff' opacity='0.4'/%3E%3Ctext x='150' y='105' text-anchor='middle' fill='%23e0e6ed' font-family='Arial' font-size='12'%3ETherapist AI%3C/text%3E%3C/svg%3E" 
+                                 alt="MyTherapist AI Mental Health Chatbot" 
+                                 loading="lazy"
+                                 itemprop="image">
+                            <div class="card-overlay">
+                                <span class="category-badge">Mental Health</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <time datetime="2024-10-15" itemprop="datePublished">October 15, 2024</time>
+                                <span class="read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    7 min read
+                                </span>
+                            </div>
+                            
+                            <h3 class="card-title" itemprop="headline">
+                                <a href="#" class="title-link">MyTherapist AI: Building Emotion-Aware Chatbots for Mental Wellness</a>
+                            </h3>
+                            
+                            <p class="card-excerpt" itemprop="description">
+                                Exploring the intersection of AI and mental health support. How to create empathetic chatbots using sentiment analysis and psychological frameworks.
+                            </p>
+                            
+                            <div class="card-tags">
+                                <span class="tag" itemprop="keywords">Mental Health</span>
+                                <span class="tag" itemprop="keywords">AI Ethics</span>
+                                <span class="tag" itemprop="keywords">Chatbots</span>
+                            </div>
+                            
+                            <a href="#" class="read-more-link" aria-label="Read more about MyTherapist AI">
+                                Read More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 4 -->
+                    <article class="blog-card scroll-reveal hover-lift" data-category="community" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23131318'/%3E%3Ccircle cx='150' cy='100' r='30' fill='%2300ff80' opacity='0.4'/%3E%3Ctext x='150' y='105' text-anchor='middle' fill='%23e0e6ed' font-family='Arial' font-size='12'%3ECommunity%3C/text%3E%3C/svg%3E" 
+                                 alt="Building Tech Communities" 
+                                 loading="lazy"
+                                 itemprop="image">
+                            <div class="card-overlay">
+                                <span class="category-badge">Community</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <time datetime="2024-09-20" itemprop="datePublished">September 20, 2024</time>
+                                <span class="read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    5 min read
+                                </span>
+                            </div>
+                            
+                            <h3 class="card-title" itemprop="headline">
+                                <a href="#" class="title-link">Building Tech Communities: Lessons from 0Day Alliance Leadership</a>
+                            </h3>
+                            
+                            <p class="card-excerpt" itemprop="description">
+                                Insights on growing and managing developer communities, fostering collaboration, and creating impactful learning environments in the tech space.
+                            </p>
+                            
+                            <div class="card-tags">
+                                <span class="tag" itemprop="keywords">Community Building</span>
+                                <span class="tag" itemprop="keywords">Leadership</span>
+                                <span class="tag" itemprop="keywords">Tech</span>
+                            </div>
+                            
+                            <a href="#" class="read-more-link" aria-label="Read more about Building Tech Communities">
+                                Read More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 5 -->
+                    <article class="blog-card scroll-reveal hover-lift" data-category="career" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23131318'/%3E%3Ccircle cx='150' cy='100' r='30' fill='%23ff6b6b' opacity='0.4'/%3E%3Ctext x='150' y='105' text-anchor='middle' fill='%23e0e6ed' font-family='Arial' font-size='12'%3ECareer%3C/text%3E%3C/svg%3E" 
+                                 alt="Frontend to AI Career Journey" 
+                                 loading="lazy"
+                                 itemprop="image">
+                            <div class="card-overlay">
+                                <span class="category-badge">Development</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <time datetime="2024-08-25" itemprop="datePublished">August 25, 2024</time>
+                                <span class="read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    8 min read
+                                </span>
+                            </div>
+                            
+                            <h3 class="card-title" itemprop="headline">
+                                <a href="#" class="title-link">From Frontend to AI: My Journey in Technology</a>
+                            </h3>
+                            
+                            <p class="card-excerpt" itemprop="description">
+                                Personal story of transitioning from frontend development to AI/ML specialization. Challenges faced, skills learned, and advice for aspiring developers.
+                            </p>
+                            
+                            <div class="card-tags">
+                                <span class="tag" itemprop="keywords">Career</span>
+                                <span class="tag" itemprop="keywords">Personal Story</span>
+                                <span class="tag" itemprop="keywords">Development</span>
+                            </div>
+                            
+                            <a href="#" class="read-more-link" aria-label="Read more about Frontend to AI journey">
+                                Read More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 6 -->
+                    <article class="blog-card scroll-reveal hover-lift" data-category="tutorial" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="card-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23131318'/%3E%3Ccircle cx='150' cy='100' r='30' fill='%23ffd93d' opacity='0.4'/%3E%3Ctext x='150' y='105' text-anchor='middle' fill='%23e0e6ed' font-family='Arial' font-size='12'%3EChatbot%3C/text%3E%3C/svg%3E" 
+                                 alt="AI Chatbot Tutorial" 
+                                 loading="lazy"
+                                 itemprop="image">
+                            <div class="card-overlay">
+                                <span class="category-badge">Tutorial</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <time datetime="2024-07-30" itemprop="datePublished">July 30, 2024</time>
+                                <span class="read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    12 min read
+                                </span>
+                            </div>
+                            
+                            <h3 class="card-title" itemprop="headline">
+                                <a href="#" class="title-link">Building Your First AI Chatbot: A Complete Beginner's Guide</a>
+                            </h3>
+                            
+                            <p class="card-excerpt" itemprop="description">
+                                Step-by-step tutorial for creating a simple chatbot using Python and OpenAI API. Perfect for students and beginners starting their AI journey.
+                            </p>
+                            
+                            <div class="card-tags">
+                                <span class="tag" itemprop="keywords">Tutorial</span>
+                                <span class="tag" itemprop="keywords">Beginner</span>
+                                <span class="tag" itemprop="keywords">Python</span>
+                                <span class="tag" itemprop="keywords">AI</span>
+                            </div>
+                            
+                            <a href="#" class="read-more-link" aria-label="Read more about building AI chatbots">
+                                Read More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="load-more-btn hover-lift" id="load-more-btn">
+                        <span>Load More Articles</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Showcase -->
+        <section class="categories-showcase">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title scroll-reveal">Explore by Category</h2>
+                    <p class="section-subtitle scroll-reveal">Discover content tailored to your interests</p>
+                </header>
+                
+                <div class="categories-grid">
+                    <div class="category-card scroll-reveal hover-lift">
+                        <div class="category-icon">
+                            <i class="fas fa-robot" aria-hidden="true"></i>
+                        </div>
+                        <h3>AI & Machine Learning</h3>
+                        <p>Latest trends, tutorials, and insights in artificial intelligence and machine learning</p>
+                        <span class="post-count">8 articles</span>
+                        <div class="category-progress">
+                            <div class="progress-bar" style="--progress: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card scroll-reveal hover-lift">
+                        <div class="category-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <h3>Programming & Development</h3>
+                        <p>Coding tutorials, best practices, and development frameworks</p>
+                        <span class="post-count">6 articles</span>
+                        <div class="category-progress">
+                            <div class="progress-bar" style="--progress: 60%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card scroll-reveal hover-lift">
+                        <div class="category-icon">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                        </div>
+                        <h3>Community & Leadership</h3>
+                        <p>Building communities, leadership insights, and event management</p>
+                        <span class="post-count">4 articles</span>
+                        <div class="category-progress">
+                            <div class="progress-bar" style="--progress: 40%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card scroll-reveal hover-lift">
+                        <div class="category-icon">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <h3>Career & Education</h3>
+                        <p>Career advice, educational resources, and professional development</p>
+                        <span class="post-count">5 articles</span>
+                        <div class="category-progress">
+                            <div class="progress-bar" style="--progress: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content scroll-reveal">
+                    <div class="newsletter-text">
+                        <h2>Stay Updated</h2>
+                        <p>Get the latest articles and insights delivered to your inbox. No spam, just quality content about AI, technology, and career development.</p>
+                        <div class="newsletter-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>Weekly AI insights</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>Exclusive tutorials</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>Early access to articles</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="newsletter-form">
+                        <form id="newsletter-form" class="subscription-form" novalidate>
+                            <div class="input-group">
+                                <label for="newsletter-email" class="sr-only">Email address</label>
+                                <input type="email" 
+                                       id="newsletter-email"
+                                       name="email" 
+                                       placeholder="Enter your email address" 
+                                       required
+                                       autocomplete="email"
+                                       aria-describedby="email-error">
+                                <button type="submit" class="subscribe-btn hover-lift" aria-label="Subscribe to newsletter">
+                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                    <span>Subscribe</span>
+                                </button>
+                            </div>
+                            <div id="email-error" class="error-message" role="alert"></div>
+                        </form>
+                        <p class="newsletter-note">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                            Join 500+ readers who stay ahead of the curve
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content scroll-reveal">
+                    <h2>Want to Collaborate on Content?</h2>
+                    <p>Interested in guest posts, interviews, or content partnerships? Let's create something valuable together</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary hover-lift">
+                            <i class="fas fa-edit" aria-hidden="true"></i>
+                            <span>Collaborate</span>
+                        </a>
+                        <a href="services.html" class="btn btn-secondary hover-lift">
+                            <i class="fas fa-briefcase" aria-hidden="true"></i>
+                            <span>View Services</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 Tarun Kumar. All rights reserved.</p>
+                    <p>AI/ML Engineer | Mathura, India</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:imtarunchaudharyy@gmail.com">imtarunchaudharyy@gmail.com</a>
+                    <span>|</span>
+                    <a href="tel:+919027806285">+91-9027806285</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/script.js"></script>
+    
+    <!-- Additional blog-specific scripts -->
+    <script>
+        // Blog-specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initBlogAnimations();
+            initBlogSearch();
+            initBlogFilters();
+            initNewsletterForm();
+        });
+    </script>
+</body>
+</html>

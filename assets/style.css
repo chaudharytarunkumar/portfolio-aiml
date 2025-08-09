@@ -1,0 +1,1215 @@
+/* ==========================================================================
+   AI Lab Interface Theme - Glassmorphism Design System
+   Responsive Light/Dark Mode with AI-inspired Animations
+   ========================================================================== */
+
+/* CSS Custom Properties for AI Lab Interface Theme */
+:root {
+  /* Light Mode - AI Lab Interface */
+  --bg-primary: #F4F6F8;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F9FAFB;
+  --bg-glass: rgba(255, 255, 255, 0.25);
+  --bg-overlay: rgba(255, 255, 255, 0.1);
+  
+  /* Text Colors - Light Mode */
+  --text-primary: #1E3A8A;
+  --text-secondary: #374151;
+  --text-muted: #6B7280;
+  --text-accent: #2563EB;
+  
+  /* Accent Colors - Light Mode */
+  --accent-primary: #2563EB;
+  --accent-secondary: #9333EA;
+  --accent-tertiary: #38BDF8;
+  --accent-quaternary: #06B6D4;
+  
+  /* Glassmorphism Effects - Light Mode */
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+  --backdrop-blur: 12px;
+  
+  /* AI/Neural Network Colors */
+  --neural-line: rgba(37, 99, 235, 0.3);
+  --neural-node: rgba(37, 99, 235, 0.8);
+  --ai-glow: rgba(37, 99, 235, 0.2);
+  --circuit-color: rgba(147, 51, 234, 0.4);
+  
+  /* Borders and Shadows */
+  --border-color: rgba(229, 231, 235, 0.6);
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --glow-light: 0 0 20px rgba(37, 99, 235, 0.3);
+  --glow-medium: 0 0 40px rgba(147, 51, 234, 0.4);
+
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --container-max-width: 1625px;
+  --section-padding: 5rem 0;
+  --element-gap: 2rem;
+  --border-radius: 16px;
+  --border-radius-lg: 24px;
+}
+
+/* Dark Mode - Futuristic Glassmorphism */
+[data-theme="dark"] {
+  /* Backgrounds - Dark Mode */
+  --bg-primary: #0A0F1E;
+  --bg-secondary: rgba(15, 23, 42, 0.8);
+  --bg-tertiary: rgba(30, 41, 59, 0.6);
+  --bg-glass: rgba(15, 23, 42, 0.4);
+  --bg-overlay: rgba(56, 189, 248, 0.05);
+  
+  /* Text Colors - Dark Mode */
+  --text-primary: #F9FAFB;
+  --text-secondary: #E5E7EB;
+  --text-muted: #A1A1AA;
+  --text-accent: #38BDF8;
+  
+  /* Accent Colors - Dark Mode */
+  --accent-primary: #38BDF8;
+  --accent-secondary: #A855F7;
+  --accent-tertiary: #06B6D4;
+  --accent-quaternary: #8B5CF6;
+  
+  /* Glassmorphism Effects - Dark Mode */
+  --glass-bg: rgba(15, 23, 42, 0.4);
+  --glass-border: rgba(56, 189, 248, 0.3);
+  --glass-shadow: rgba(56, 189, 248, 0.1);
+  --backdrop-blur: 16px;
+  
+  /* AI/Neural Network Colors - Dark Mode */
+  --neural-line: rgba(56, 189, 248, 0.6);
+  --neural-node: rgba(56, 189, 248, 1);
+  --ai-glow: rgba(56, 189, 248, 0.4);
+  --circuit-color: rgba(168, 85, 247, 0.6);
+  
+  /* Borders and Shadows - Dark Mode */
+  --border-color: rgba(56, 189, 248, 0.2);
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.4);
+  --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --glow-light: 0 0 20px rgba(56, 189, 248, 0.4);
+  --glow-medium: 0 0 40px rgba(168, 85, 247, 0.5);
+}
+
+/* ==========================================================================
+   Base Styles & Reset
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* AI Lab Background Animation */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, var(--ai-glow) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, var(--circuit-color) 0%, transparent 50%),
+    linear-gradient(135deg, var(--bg-overlay) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+  animation: aiPulse 8s ease-in-out infinite;
+}
+
+@keyframes aiPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* Neural Network Background Pattern */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--neural-node) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, var(--neural-node) 1px, transparent 1px);
+  background-size: 150px 150px, 100px 100px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.1;
+  animation: neuralFloat 12s linear infinite;
+}
+
+@keyframes neuralFloat {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-10px, -10px); }
+  50% { transform: translate(10px, -5px); }
+  75% { transform: translate(-5px, 10px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ==========================================================================
+   Layout & Container
+   ========================================================================== */
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ==========================================================================
+   AI Lab Header/Navigation
+   ========================================================================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--backdrop-blur));
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header.scrolled {
+  background: var(--glass-bg);
+  box-shadow: var(--glow-light);
+  border-bottom-color: var(--accent-primary);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--ai-glow), transparent);
+  transition: left 0.5s ease;
+}
+
+.nav-link:hover::before {
+  left: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-primary);
+  background: var(--glass-bg);
+  box-shadow: var(--glow-light);
+  transform: translateY(-2px);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.theme-toggle,
+.nav-toggle {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(var(--backdrop-blur));
+}
+
+.theme-toggle:hover,
+.nav-toggle:hover {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow: var(--glow-light);
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   AI Lab Hero Section
+   ========================================================================== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 6rem 0 4rem;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-visual {
+  order: 1;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.hero-title .greeting {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+.hero-title .name {
+  display: block;
+  font-size: 4rem;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: aiGlow 3s ease-in-out infinite;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.4s forwards, aiGlow 3s ease-in-out infinite 1s;
+}
+
+.hero-title .title {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--accent-tertiary);
+  font-weight: 500;
+  text-shadow: var(--glow-light);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.6s forwards;
+}
+
+@keyframes aiGlow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2) drop-shadow(0 0 20px var(--accent-primary)); }
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.8s forwards;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 1s forwards;
+}
+
+.social-links {
+  display: flex;
+  gap: 23px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 1.2s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* AI Lab Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(var(--backdrop-blur));
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  box-shadow: var(--glow-light);
+  border: 1px solid var(--accent-primary);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--glow-medium);
+}
+
+.btn-secondary {
+  background: var(--glass-bg);
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  backdrop-filter: blur(var(--backdrop-blur));
+}
+
+.btn-secondary:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--glow-light);
+}
+
+/* Social Links */
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(var(--backdrop-blur));
+  margin-top: 1rem;
+}
+
+.social-link:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: var(--glow-light);
+}
+
+/* Hero Visual/Profile */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-profile {
+  position: relative;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 3px solid var(--glass-border);
+  backdrop-filter: blur(var(--backdrop-blur));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--glow-light);
+  animation: profileFloat 6s ease-in-out infinite;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@keyframes profileFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.profile-pulse {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid var(--accent-primary);
+  border-radius: 50%;
+  animation: profilePulse 2s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes profilePulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.05); opacity: 0.3; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+/* ==========================================================================
+   AI Lab Stats Section
+   ========================================================================== */
+
+.stats {
+  padding: 3rem 0;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--backdrop-blur));
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(var(--backdrop-blur));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.stat-item:hover::before {
+  transform: scaleX(1);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glow-light);
+  border-color: var(--accent-primary);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  display: block;
+  font-family: var(--font-mono);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   AI Lab Skills Section - Performance Panels
+   ========================================================================== */
+
+.featured-skills {
+  padding: var(--section-padding);
+  background: var(--bg-primary);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 2px;
+  animation: titleUnderline 2s ease-in-out infinite;
+}
+
+@keyframes titleUnderline {
+  0%, 100% { width: 80px; }
+  50% { width: 120px; }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.skill-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(var(--backdrop-blur));
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--ai-glow), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: var(--glow-medium);
+  border-color: var(--accent-primary);
+}
+
+.skill-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: var(--glow-light);
+  animation: iconPulse 3s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.skill-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* AI Performance Metrics */
+.skill-card::after {
+  content: attr(data-accuracy) '% Accuracy';
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--accent-primary);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover::after {
+  opacity: 1;
+}
+
+/* Neural Network Background Pattern */
+.neural-network {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 20%, var(--neural-node) 3px, transparent 3px),
+    radial-gradient(circle at 80% 80%, var(--neural-node) 2px, transparent 2px),
+    radial-gradient(circle at 40% 60%, var(--neural-node) 2px, transparent 2px);
+  background-size: 200px 200px, 150px 150px, 180px 180px;
+  animation: neuralMove 15s linear infinite;
+  opacity: 0.1;
+}
+
+@keyframes neuralMove {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-20px, -20px) rotate(120deg); }
+  66% { transform: translate(20px, -10px) rotate(240deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* ==========================================================================
+   Page Hero (for other pages)
+   ========================================================================== */
+
+.page-hero {
+  padding: 8rem 0 4rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--backdrop-blur));
+  border-bottom: 1px solid var(--glass-border);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--ai-glow), transparent 50%);
+  opacity: 0.3;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   AI Lab Cards & Components
+   ========================================================================== */
+
+.card, .project-card, .blog-card, .profile-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-lg);
+  backdrop-filter: blur(var(--backdrop-blur));
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  transform: translateY(-8px) perspective(1000px) rotateX(5deg);
+  box-shadow: var(--glow-medium);
+  border-color: var(--accent-primary);
+}
+
+/* ==========================================================================
+   Forms - Futuristic AI Interface
+   ========================================================================== */
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+  font-size: 1rem;
+  backdrop-filter: blur(var(--backdrop-blur));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--ai-glow);
+  background: var(--bg-secondary);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Animations & Effects
+   ========================================================================== */
+
+/* Scroll Reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glow-light);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* 3D Tilt Effect */
+.tilt-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.tilt-3d:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+}
+
+/* Typewriter Effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid var(--accent-primary);
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--accent-primary); }
+}
+
+/* ==========================================================================
+   Blog Page Specific Styles
+   ========================================================================== */
+
+/* Blog Hero */
+.blog-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--ai-glow), var(--circuit-color));
+  backdrop-filter: blur(var(--backdrop-blur));
+}
+
+.blog-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1118px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.blog-hero .hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blog-hero .hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin: 0 auto 20px;
+}
+
+.blog-hero .hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2px;
+}
+
+.blog-hero .stat-item {
+  text-align: center;
+}
+
+.blog-hero .stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+}
+
+.blog-hero .stat-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--backdrop-blur));
+  border-top: 1px solid var(--glass-border);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-muted);
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-primary);
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-text {
+    order: 2;
+  }
+  
+  .hero-visual {
+    order: 1;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--backdrop-blur));
+    border-top: 1px solid var(--glass-border);
+    flex-direction: column;
+    padding: 2rem;
+    transition: top 0.3s ease;
+  }
+  
+  .nav-menu.active .nav-list {
+    top: 100%;
+  }
+  
+  .hero-title .name {
+    font-size: 2.5rem;
+  }
+  
+  .skills-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .blog-hero .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .blog-hero .hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title .name {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+}
+
+/* ==========================================================================
+   Dark Mode Specific Enhancements
+   ========================================================================== */
+
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] .skill-card:hover,
+[data-theme="dark"] .stat-item:hover {
+  box-shadow: 
+    var(--glow-medium),
+    inset 0 0 20px rgba(56, 189, 248, 0.1);
+}
+
+[data-theme="dark"] .neural-network {
+  background-image: 
+    radial-gradient(circle at 20% 20%, var(--neural-node) 3px, transparent 3px),
+    radial-gradient(circle at 80% 80%, var(--accent-secondary) 2px, transparent 2px),
+    radial-gradient(circle at 40% 60%, var(--neural-node) 2px, transparent 2px);
+  opacity: 0.2;
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --border-color: #000000;
+    --text-muted: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --border-color: #ffffff;
+    --text-muted: #ffffff;
+  }
+}

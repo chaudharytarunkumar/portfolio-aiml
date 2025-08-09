@@ -1,0 +1,17 @@
+{
+  "name": "tarun-portfolio",
+  "version": "1.0.0",
+  "description": "Tarun Kumar's AI/ML Engineer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -c-1 --cors",
+    "start": "npx http-server . -p 3000 -c-1",
+    "build": "echo 'No build needed for static site'"
+  },
+  "keywords": ["portfolio", "ai", "ml", "static-site"],
+  "author": "Tarun Kumar",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
